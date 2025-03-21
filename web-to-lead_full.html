@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 120px; /* Aligns labels properly */
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Fermob Logo (Centered) -->
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://fermob360.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Jpeg&versionId=068Tp00000DPTFg&operationContext=DELIVERY&contentId=05TTp00000Gnob1&page=0&d=/a/Tp0000075Xye/IJlPaiR4L1A7BW8rO.aiRWj8ZfSX25jb5tTn9OLczWc&oid=00D2p0000014Hk8&dpt=null&viewId=" width="250" alt="Fermob Logo">
+</div>
+
+<!-- Contact Form -->
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DAa00000Bxkwi" method="POST" style="max-width: 500px; margin: auto;">
+
+    <input type="hidden" name="oid" value="00DAa00000Bxkwi">
+    <input type="hidden" name="retURL" value="http://tiptoe.fr">
+    
+    <!-- Hidden Fields -->
+    <input type="hidden" name="lead_source" value="TipToe">
+    <input type="hidden" name="00N2p000006Zlxc" value="Contract">
+
+    <table style="width: 100%;">
+        <!-- Company (Required) -->
+        <tr>
+            <td><label for="company">Company: <span class="required">*</span></label></td>
+            <td><input type="text" id="company" name="company" maxlength="40" required></td>
+        </tr>
+
+        <!-- Activity -->
+        <tr>
+            <td><label for="activity">Activity:</label></td>
+            <td>
+                <select id="activity" name="00N2p000006Zo21" required>
+                    <option value="">--Select Activity--</option>
+                    <option value="Boutique accessoires décoration">Boutique accessoires décoration</option>
+                    <option value="Architecte">Architecte</option>
+                    <option value="Architecte intérieur projet professionnel">Architecte intérieur projet professionnel</option>
+                    <option value="Architecte intérieur projet résidentiel">Architecte intérieur projet résidentiel</option>
+                    <option value="Bar">Bar</option>
+                    <option value="Plagiste">Plagiste</option>
+                    <option value="Revendeur contract">Revendeur contract</option>
+                    <option value="Décorateur">Décorateur</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Centrale d’Achat">Centrale d’Achat</option>
+                    <option value="Revendeur spécialisé ameublement">Revendeur spécialisé ameublement</option>
+                    <option value="Jardinerie GSS">Jardinerie GSS</option>
+                    <option value="Maisons hôtes, gites, locations saisonnières">Maisons hôtes, gites, locations saisonnières</option>
+                    <option value="Sièges sociaux">Sièges sociaux</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="Grands Comptes">Grands Comptes</option>
+                    <option value="Paysagiste">Paysagiste</option>
+                    <option value="Site de vente en ligne">Site de vente en ligne</option>
+                    <option value="Autres activités">Autres activités</option>
+                    <option value="Presse">Presse</option>
+                    <option value="Lieu Public">Lieu Public</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Spécialiste Lumière">Spécialiste Lumière</option>
+                    <option value="Fournisseur">Fournisseur</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Zip -->
+        <tr>
+            <td><label for="zip">Zip:</label></td>
+            <td><input type="text" id="zip" name="zip" maxlength="20"></td>
+        </tr>
+
+        <!-- City -->
+        <tr>
+            <td><label for="city">City:</label></td>
+            <td><input type="text" id="city" name="city" maxlength="40"></td>
+        </tr>
+
+        <!-- Country Dropdown -->
+        <tr>
+            <td><label for="country">Country:</label></td>
+            <td>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Switzerland">Switzerland</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- First Name -->
+        <tr>
+            <td><label for="first_name">First Name:</label></td>
+            <td><input type="text" id="first_name" name="first_name" maxlength="40"></td>
+        </tr>
+
+        <!-- Last Name (Required) -->
+        <tr>
+            <td><label for="last_name">Last Name: <span class="required">*</span></label></td>
+            <td><input type="text" id="last_name" name="last_name" maxlength="80" required></td>
+        </tr>
+
+        <!-- Email (Required) -->
+        <tr>
+            <td><label for="email">Email: <span class="required">*</span></label></td>
+            <td><input type="email" id="email" name="email" maxlength="80" required></td>
+        </tr>
+
+        <!-- Phone -->
+        <tr>
+            <td><label for="phone">Phone:</label></td>
+            <td><input type="tel" id="phone" name="phone" maxlength="40"></td>
+        </tr>
+
+        <!-- Message -->
+        <tr>
+            <td><label for="description">Message:</label></td>
+            <td><textarea id="description" name="description" rows="4" cols="40"></textarea></td>
+        </tr>
+
+        <!-- Submit Button -->
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <br>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
